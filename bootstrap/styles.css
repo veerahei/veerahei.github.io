@@ -1,0 +1,73 @@
+body {
+    /*background-color: #E4D0D1;*/
+    color: #2f3f4d;
+    font-family: Poppins, sans-serif;
+
+}
+
+#about,
+#services,
+#pricing,
+#contact {
+    scroll-margin-top: 80px;
+}
+
+.container-custom {
+    background-color: #E4D0D1;
+
+}
+
+.navbar-brand {
+    font-family: 'Abril Fatface', serif;
+}
+
+.container-custom h1 {
+    padding-bottom: 15px;
+    text-align: center;
+    font-family: 'Abril Fatface', serif;
+}
+
+.container-custom h6 {
+    padding: 15px;
+    text-align: center;
+}
+
+.container-custom h2 {
+    text-align: center;
+    font-family: 'Abril Fatface', serif;
+
+}
+
+.btn-custom {
+    background-color: bluewhite;
+
+}
+
+#custom-navbar.scrolling-active {
+    background-color: white;
+}
+
+.navbar-custom {
+
+    /*Mieti tätä, näyttää aika hyvältä ilman tätä mutta kuvat pitää vaihtaa sellaisiin jossa yksivärinen tausta
+    background-color: #C8E0F4;*/
+}
+
+/*Navigaation tekstien väri*/
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+    color: #2f3f4d;
+
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: black;
+}
+
+
+
+/*Haitarin otsikon taustaväri*/
+.custom-accordion .card-header {
+    background-color: #E4D0D1;
+}
