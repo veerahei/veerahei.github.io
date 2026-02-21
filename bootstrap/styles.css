@@ -1,10 +1,4 @@
-body {
-    /*background-color: #E4D0D1;*/
-    color: #2f3f4d;
-    font-family: Poppins, sans-serif;
-
-}
-
+/*Sivun osioihin scrollatessa margin-top, jotta navigaatiopalkki ei peitä osion otsikkoa*/
 #about,
 #services,
 #pricing,
@@ -12,15 +6,13 @@ body {
     scroll-margin-top: 80px;
 }
 
+/*Containerin muotoilua: tausta- ja tekstiväri*/
 .container-custom {
     background-color: #E4D0D1;
-
+    color: #2f3f4d;
 }
 
-.navbar-brand {
-    font-family: 'Abril Fatface', serif;
-}
-
+/*Containerin teekstien tyylittely*/
 .container-custom h1 {
     padding-bottom: 15px;
     text-align: center;
@@ -38,33 +30,46 @@ body {
 
 }
 
-.btn-custom {
-    background-color: bluewhite;
-
+/*Navigaatiopalkin sivun nimen fontti*/
+.navbar-brand {
+    font-family: 'Abril Fatface', serif;
 }
 
+/*Grid-osion tyylittely: tekstin väri*/
+.grid-text-custom {
+    color: #2f3f4d;
+}
+
+/*Fontin määrittely tekstielementteihin*/
+p,
+li,
+span,
+h6,
+.card-text,
+.table,
+a,
+.btn,
+.grid-text-custom {
+    font-family: Poppins, sans-serif;
+}
+
+/*Kun sivua scrollataan alaspäin, navigaatiopalkki saa classin "scrolling active", jolloin taustaväri valkoinen*/
 #custom-navbar.scrolling-active {
     background-color: white;
 }
 
-.navbar-custom {
-
-    /*Mieti tätä, näyttää aika hyvältä ilman tätä mutta kuvat pitää vaihtaa sellaisiin jossa yksivärinen tausta
-    background-color: #C8E0F4;*/
-}
 
 /*Navigaation tekstien väri*/
 .navbar-custom .navbar-brand,
 .navbar-custom .nav-link {
     color: #2f3f4d;
-
 }
 
+/*Aktiivinen osio näkyy valikossa mustana*/
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: black;
+    color: black
 }
-
 
 
 /*Haitarin otsikon taustaväri*/

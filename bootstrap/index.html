@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <!--Navigointipalkin taustaväri hallitaan javascript-koodilla. Jos sivua scrollataan alaspäin yli 50 pikseliä, navigaatiolle asetetaan class scrolling-active, jonka taustaväriksi on css:ssä määritelty vakoinen
-    Lahde: https://stackoverflow.com/questions/65192473/how-do-i-make-transparent-navbar-have-background-color-after-scroll
-
+    <!--Javascriptkoodin linkitys-->
+    <!--Navigointipalkin taustaväri hallitaan javascript-koodilla. Jos sivua scrollataan alaspäin yli 50 pikseliä, navigaatiolle asetetaan class "scrolling-active", jonka taustaväriksi on css:ssä määritelty vakoinen
+    Lähteet: https://stackoverflow.com/questions/65192473/how-do-i-make-transparent-navbar-have-background-color-after-scroll
     https://forum.bootstrapstudio.io/t/change-navbar-colour-on-scroll/11323/2
     -->
     <script>
@@ -16,36 +16,40 @@
             } else {
                 nav.classList.remove('scrolling-active');
             }
-
         });
     </script>
+
     <!--Fontit-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--CSS-tyylien linkitys-->
     <link rel="stylesheet" href="styles.css">
+    <!--Bootstrap CSS ja JS linkitys-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BeautyPoint</title>
 </head>
 
-<body>
+<!--Scrollspy näyttää missä sivuston osiossa ollaan-->
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
 
     <main>
-        <!--Nav bar for the web page-->
+        <!--Responsiivinen navigointipalkki, kiinnitetty yläreunaan, koko sivun leveys-->
         <nav id="custom-navbar" class="navbar navbar-expand-md navbar-custom fixed-top">
             <div class="container-fluid">
+                <!--Sivuston logo-->
                 <a class="navbar-brand" href="#">
                     <img src="./assets/images/logo.png" alt="BeautyPoint logo" style="width: 50px;">
                     Beauty Point</a>
-
+                <!--Hampurilaisvalikko-->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav navbar-text">
+                <!--Vaigaation linkit, tasattu navigaation oikeaan reunaan (elementin loppuun)-->
+                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+                    <ul class="navbar-nav text-end ">
                         <li class="nav-item">
                             <a class="nav-link" href="#about">Meistä</a>
                         </li>
@@ -63,31 +67,43 @@
             </div>
         </nav>
 
-        <!--Image carousel-->
+        <!--Kuvakaruselli-->
         <div id="carousel-image" class="carousel slide" data-bs-ride=carousel>
-
-            <!--Indicators, dots-->
+            <!--Indikaattorit, missä kuvassa ollaan menossa-->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel-image" data-bs-slide-to="0" class="active"></button>
                 <button type="button" data-bs-target="#carousel-image" data-bs-slide-to="1"></button>
                 <button type="button" data-bs-target="#carousel-image" data-bs-slide-to="2"></button>
             </div>
 
-            <!-- The slideshow/carousel -->
+            <!-- Slidet carousel-elementtiin -->
             <div class="carousel-inner">
-                <!--Carousel image elements-->
+                <!--Carousel-kuvat-->
+                <!--Kuva 1-->
                 <div class="carousel-item active">
-                    <img src="assets/images/kuva1.jpg" alt="Los Angeles" class="d-block w-100">
+                    <img src="assets/images/kuva1.jpg" alt="Nuori nainen ihonhoitotuotteen kanssa"
+                        class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h3>Sinulle räätälöidyt palvelut</h3>
+                    </div>
                 </div>
+                <!--Kuva 2-->
                 <div class="carousel-item">
-                    <img src="assets/images/kuva2.jpg" alt="Los Angeles" class="d-block w-100">
+                    <img src="assets/images/kuva2.jpg" alt="Ihonhoitotoseerumit" class="d-block w-100">
+                    <div class="carousel-caption text-dark">
+                        <h3>Uusimmat ihonhoidon trendit</h3>
+                    </div>
                 </div>
+                <!--Kuva 3-->
                 <div class="carousel-item">
-                    <img src="assets/images/kuva3.jpg" alt="Los Angeles" class="d-block w-100">
+                    <img src="assets/images/kuva3.jpg" alt="Ihonhoitotarvikkeita" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <h3>Osaava henkilökunta</h3>
+                    </div>
                 </div>
             </div>
 
-            <!-- Left and right controls/icons -->
+            <!-- Carousel-elementin painikkeet oikeassa ja vasemmassa reunassa -->
             <button class="carousel-control-prev" type="button" data-bs-target="#carousel-image" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
             </button>
@@ -96,73 +112,74 @@
             </button>
         </div>
 
-        </div>
-
-
-        <!--Big contaner-->
+        <!--Container keskittää sisällön sivulla. Beauty Point -esittelyosio. -->
         <div id="about" class="container p-5 my-5 container-custom text-center">
             <h1>Beauty Point</h1>
             <h6>Moderni kauneushoitola, jossa yhdistyvät rentoutuminen, ammattitaito ja korkealaatuiset
                 tuotteet.<br>Meillä
                 saat hetken omaa aikaa ja kauneudenhoitoa yksilöllisesti räätälöitynä.</h6>
             <a href="#contact" class="btn btn-outline-dark">Ota yhteyttä</a>
-
         </div>
 
-
-
-        <!-- Grid, teksti ja kuva vierekkäin -->
-        <!-- Containerin sisällä, jotta sama leveys sivustolla -->
+        <!-- Grid, teksti ja kuva vierekkäin, class row. Jaettu kahteen yhtä leveään gridiin määrityksellä col-xl-6-->
+        <!-- Containerin sisällä, jotta sisällöllä sama leveys sivustolla -->
         <div class="container my-5">
             <div class="row">
+                <!--Gridin vasen puoli: kuva-->
                 <div class="col-xl-6">
-                    <img src="assets/images/kuva4.jpg" class="img-fluid">
+                    <img src="assets/images/kuva4.jpg" alt="Nainen levittää kasvorasvaa kasvoilleen" class="img-fluid">
                 </div>
-                <div class="col-xl-6 d-flex align-items-center p-5">Hoitolan tilat on suunniteltu rauhalliseksi
+                <!--Gridin oikea puoli: teksti-->
+                <div class="col-xl-6 d-flex align-items-center p-5 grid-text-custom">Hoitolan tilat on suunniteltu
+                    rauhalliseksi
                     keitaaksi
                     kaupungin
                     keskelle. Jokainen
                     hoitohuone tarjoaa yksityisyyttä ja mukavuutta, jotta voit rentoutua täysin hoidon aikana.</div>
             </div>
+            <!--Toinen kaksiosainen grid-->
             <div class="row">
-                <div class="col-xl-6 d-flex align-items-center p-5">Käytämme vain korkealaatuisia, ihoystävällisiä
+                <!--Gridin vasen puoli: teksti-->
+                <div class="col-xl-6 d-flex align-items-center p-5 grid-text-custom">Käytämme vain korkealaatuisia,
+                    ihoystävällisiä
                     tuotteita ja päivittäinen hygienia
                     on meille ensiarvoisen tärkeää. Henkilökuntamme koulutus ja kokemus takaavat ammattimaisen palvelun.
                 </div>
+                <!--Gridin oikea puoli: kuva-->
                 <div class="col-xl-6">
-                    <img src="assets/images/ihonhoito.jpg" class="img-fluid">
+                    <img src="assets/images/ihonhoito.jpg" alt="Nainen levittää kasvoseerumia kasvoilleen"
+                        class="img-fluid">
                 </div>
             </div>
         </div>
 
-
-
-
+        <!--Palvelut. 
+        Container, jotta sisältö samalla leveydellä koko sivustolla-->
         <div id="services" class="container p-5 my-5 container-custom">
             <h2>Palvelut</h2>
             <h6>Meiltä löydät kaikki tarvitsemasi hyvinvoinnin palvelut.</h6>
-
-
-            <!--Kortit-->
+            <!--Kortit asetettu vierekkäin gridin avulla. Class col-lg-3 col-md-6 col-12: isolla näytöllä neljä korttia vierekkäin, keskikokoisella kaksi korttia vierekkäin, pienellä näytöllä yksittäiset kortit -->
             <div class="container">
                 <div class="row g-3">
-
+                    <!--Kortti 1-->
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="card h-100">
-                            <img class="card-img-top" src="assets/images/kuva5.jpg" alt="">
+                            <img class="card-img-top" src="assets/images/kuva5.jpg" alt="Nainen kasvohoidossa">
                             <div class="card-body">
                                 <h4 class="card-title">Kasvohoito</h4>
                                 <p class="card-text">Räätälöity hoito ihotyypin mukaan, joka puhdistaa, kosteuttaa ja
                                     kirkastaa ihoa. Sopii kaikille, jotka haluavat hehkuvan ja raikkaan ihon.</p>
+                                <!--Badge kuvaamaan palvelua-->
                                 <span class="badge bg-dark">Suosituin</span>
                             </div>
                         </div>
                     </div>
 
-
+                    <!--Kortti 2-->
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="card h-100">
-                            <img class="card-img-top" src="assets/images/hieronta.jpg" alt="">
+                            <img class="card-img-top" src="assets/images/hieronta.jpg"
+                                alt="Nainen kuumakivihieronnassa">
                             <div class="card-body">
                                 <h4 class="card-title">Hieronta</h4>
                                 <p class="card-text">Rentouttava hieronta lievittää lihasjännitystä ja parantaa
@@ -172,9 +189,11 @@
                         </div>
                     </div>
 
+                    <!--Kortti 3-->
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="card h-100">
-                            <img class="card-img-top" src="assets/images/manikyyri.jpg" alt="">
+                            <img class="card-img-top" src="assets/images/manikyyri.jpg"
+                                alt="Naisen vaaleaksi lakatut kynnet">
                             <div class="card-body">
                                 <h4 class="card-title">Manikyyri & Pedikyyri</h4>
                                 <p class="card-text">Täydellinen käsi- ja jalkahoito sisältäen kynsien muotoilun,
@@ -184,13 +203,16 @@
                         </div>
                     </div>
 
+                    <!--Kortti 4-->
                     <div class="col-lg-3 col-md-6 col-12">
                         <div class="card h-100">
-                            <img class="card-img-top" src="assets/images/ripset.jpg" alt="">
+                            <img class="card-img-top" src="assets/images/ripset.jpg"
+                                alt="Silmä, jossa ripsienpidennykset">
                             <div class="card-body">
                                 <h4 class="card-title">Ripsien ja kulmien muotoilu</h4>
                                 <p class="card-text">Ripsien kestovärjäys ja kulmien muotoilu korostavat katsetta
                                     luonnollisesti ja kauniisti.</p>
+                                <!--Badge kuvaamaan palvelua-->
                                 <span class="badge bg-dark">Sopii myös nuorille</span>
                             </div>
                         </div>
@@ -200,20 +222,23 @@
             </div>
         </div>
 
-        <!--Haitari-->
+        <!--Hoitopaketit esitettynä haitarissa-->
         <div class="container mb-2 p-3 container-custom">
             <h2>Hoitopaketit</h2>
         </div>
 
-
+        <!--Haitari-->
         <div class="container">
             <div id="accordion" class="custom-accordion">
+                <!--Haitarin 1. osio-->
                 <div class="card">
+                    <!--Haitarin otsikkoteksti-->
                     <div class="card-header">
                         <a class="btn" data-bs-toggle="collapse" href="#collapseOne">
                             Paketti 1: Hemmottele itseäsi
                         </a>
                     </div>
+                    <!--Haitarin leipäteksti-->
                     <div id="collapseOne" class="collapse show" data-bs-parent="#accordion">
                         <div class="card-body">
                             <ul>
@@ -226,6 +251,7 @@
                         </div>
                     </div>
                 </div>
+                <!--Haitarin 2. osio-->
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseTwo">
@@ -243,6 +269,7 @@
                         </div>
                     </div>
                 </div>
+                <!--Haitarin 3. osio-->
                 <div class="card">
                     <div class="card-header">
                         <a class="collapsed btn" data-bs-toggle="collapse" href="#collapseThree">
@@ -263,10 +290,10 @@
             </div>
         </div>
 
-        <!--Taulukko-->
+        <!--Hinnasto esitettynä taulukossa-->
         <div id="pricing" class="container my-5 p-3 container-custom">
             <h2>Hinnasto</h2>
-
+            <!--Responsiivinen taulukko-->
             <div class="table-responsive">
                 <table class="table table-hover">
                     <thead>
@@ -302,13 +329,12 @@
             </div>
         </div>
 
-
-
+        <!--Yhteystiedot-->
         <div id="contact" class="container p-5 my-5 container-custom">
             <div class="text-center mb-5">
                 <h2>Yhteystiedot</h2>
             </div>
-
+            <!--Grid, jossa kaksi yhtä suurta osiota vierekkäin-->
             <div class="row">
                 <!-- Vasen puoli: yhteystiedot -->
                 <div class="col-md-6">
@@ -336,23 +362,19 @@
                         La: 10:00 - 15:00<br>
                         Su: Suljettu
                     </p>
-
-
                 </div>
 
                 <!-- Oikea puoli: kuva -->
                 <div class="col-md-6">
-                    <img src="assets/images/hoitola.jpg" class="img-fluid " alt="Kauneushoitola">
+                    <img src="assets/images/hoitola.jpg" class="img-fluid" alt="Kauneushoitola">
                 </div>
-
             </div>
-
         </div>
 
+        <!--Footer, koko sivun leveys (container-fluid)-->
         <footer>
             <div class="container-fluid p-3 container-custom">Copyright 2026 BeautyPoint</div>
         </footer>
-
     </main>
 
 </body>
