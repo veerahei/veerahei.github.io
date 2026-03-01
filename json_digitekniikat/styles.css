@@ -1,0 +1,51 @@
+/* CSS tiedosto, joka sisältää tyylitiedot sivustolle */
+main {
+    background-color: #F1F5F4;
+    /* Taustaväri koko sivustolle */
+    margin: 0;
+    /* Poistaa oletus marginaalit */
+    padding: 5%;
+}
+
+nav {
+    margin-bottom: 1%;
+}
+
+
+/* BOOTSRAP NAVI VÄRIT */
+/* taustan väri */
+.navbar-custom {
+    background-color: greenyellow;
+}
+
+/* Tekstin väri */
+.navbar-custom .navbar-text {
+    color: green;
+}
+
+/* linkin väri */
+.navbar-custom .navbar-nav .nav-link {
+    color: green;
+}
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.navbar-custom a {
+    text-decoration: none;
+
+}
+
+/*Valkoinen laatikko säätiedoille*/
+#saaOsio {
+    background-color: white;
+    width: 40%;
+}
+
+/*Säätiedot fontin keventäminen*/
+#saaOsio h3 {
+    font-weight: 400;
+}
