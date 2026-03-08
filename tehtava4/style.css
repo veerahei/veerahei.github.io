@@ -37,6 +37,11 @@ body {
     ;
 }
 
+/*Etusivun tyylit*/
+.textLink {
+    color: #70020F;
+}
+
 /*Projektisivun tyylit*/
 .projektiContainer {
     background-color: #FFDEE2;
