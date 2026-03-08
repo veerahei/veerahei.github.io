@@ -1,25 +1,68 @@
+/*Sivuston fontti*/
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+/*Bannerin tyylit*/
 .custom-banner {
     background-color: #FFDEE2;
+}
+
+.custom-banner a {
+    color: #70020F;
+    font-family: "Ultra";
+    font-size: 50px;
+    text-decoration: none;
+}
+
+
+/*Navigaation tyylit*/
+/*Navigaatio hover valkoinen*/
+.custom-navbar .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+.custom-navbar a {
+    color: #FFDEE2;
 }
 
 .custom-navbar {
     background-color: #70020F;
 }
 
-.custom-navbar a {
-    color: #FFDEE2;
-    ;
-}
-
-.custom-banner h1 {
-    color: #70020F;
-    font-family: "Ultra";
-    font-size: 50px;
-}
-
-
+/*Footerin tyylit*/
 .custom-footer {
     background-color: #70020F;
     color: #FFDEE2;
     ;
+}
+
+/*Projektisivun tyylit*/
+.projektiContainer {
+    background-color: #FFDEE2;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/*Yhteystietosivun tyylit*/
+.fa {
+    width: 40px;
+    text-decoration: none;
+    color: #70020F;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+/*Sivuston painikkeiden tyylit*/
+.custom-button {
+    background-color: #70020F;
+    color: white;
+}
+
+.custom-button:hover {
+    background-color: #70020F;
+    opacity: 0.7;
+    color: white;
 }
