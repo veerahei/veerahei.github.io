@@ -1,0 +1,25 @@
+.custom-banner {
+    background-color: #FFDEE2;
+}
+
+.custom-navbar {
+    background-color: #70020F;
+}
+
+.custom-navbar a {
+    color: #FFDEE2;
+    ;
+}
+
+.custom-banner h1 {
+    color: #70020F;
+    font-family: "Ultra";
+    font-size: 50px;
+}
+
+
+.custom-footer {
+    background-color: #70020F;
+    color: #FFDEE2;
+    ;
+}
